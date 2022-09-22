@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Delete User</title>
+	<h1>Delete User</h1>
+</head>
+<body>
+<center>
+<h1>Delete User</h1>
+  <%= form_with(model: @register, url: register_path(@register),:method=>'delete') do |form| %> 
+
+  <div style="margin-top: 20px;">
+  <p>Are you sure want to delete user</p>
+  <p><%= @register.name %></p>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <%= form.submit ("Delete User")%>
+  </div>
+<% end %>
+</center>
+</body>
+</html>
+

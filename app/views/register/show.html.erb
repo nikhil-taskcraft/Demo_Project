@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Show Users Details</title>
+	<h1>Show Users Details</h1>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<th>Name</th>
+			<td> <%= @register.name %></td>
+			
+		</tr>
+
+		<tr>
+			<th>Email</th>
+			<td><%= @register.email %> </td>
+			
+		</tr>
+
+		<tr>
+			<th>Gender</th>
+			<td><%= @register.gender %> </td>
+			
+		</tr>
+
+		<tr>
+			<th>Marital Status</th>
+			<td><%= @register.marital_status ? 'Maried' : 'Single' %> </td>
+			
+		</tr>
+
+		<tr>
+			<th>City</th>
+			<td><%= @register.city %> </td>
+		</tr>
+		<tr>
+			<th>About Me</th>
+			<td><%= @register.about_me %> </td>
+		</tr>
+	</table>
+
+</body>
+</html>
