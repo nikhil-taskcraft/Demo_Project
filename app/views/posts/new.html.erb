@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Instagram Clone</title>
+	
+</head>
+<body>
+	<a href="<%= "/" %>">Back to Home !!!</a>
+	<h2><b>Create New post</b></h2>
+<center>
+
+
+<%= form_with(model: @post, url: "/posts", local: true) do |form| %>
+
+  <div style="margin-top: 20px;">
+    <%= form.label :"Upload File" %><br>
+    <%= form.file_field :file %>
+    
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+
+  <div style="margin-top: 20px;">
+    <%= form.label :"comment" %><br>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <%= form.submit ("Create Post")%>
+  </div>
+<% end %>
+</center>
+</body>
+</html>
+

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
     devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
 
     devise_scope :user do
@@ -23,15 +24,22 @@ Rails.application.routes.draw do
       get :delete
     end
   end
- # resources :register
 
+ resources :posts do
+    member do
+      get :delete
+    end
+  end
+
+
+  # resources :register
   # get 'register/new', to: 'register#new', as: 'new_register'
   # post 'register', to: 'register#create'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "register#index"
-  root "register#index"
+  root "posts#index"
 end
 
 
